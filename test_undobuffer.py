@@ -50,7 +50,7 @@ class UndoKeyboardInsertTest(unittest.TestCase):
         self.assertEqual(len(self.buf.undo_stack), 8)
 
     def test_can_redo_now(self):
-        """test if can_redo gives positive result now"""
+        """test if can_redo gives positive result after undo"""
         self.buf.undo()
         self.assertEqual(self.buf.can_redo, True)
 
