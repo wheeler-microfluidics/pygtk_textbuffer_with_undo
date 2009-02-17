@@ -47,7 +47,6 @@ class UndoableBuffer(gtk.TextBuffer):
         gtk.TextBuffer.__init__(self)
         self.undo_stack = []
         self.redo_stack = []
-        self.modified = False
         self.not_undoable_action = False
         self.undo_in_progress = False
         self.connect('insert-text', self.on_insert_text)
