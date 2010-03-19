@@ -199,8 +199,8 @@ class UndoableBuffer(gtk.TextBuffer):
             self.place_cursor(start)
         else:
             start = self.get_iter_at_offset(undo_action.start)
-            stop = self.get_iter_at_offset(undo_action.end)
             self.insert(start, undo_action.text)
+            stop = self.get_iter_at_offset(undo_action.end)
             if undo_action.delete_key_used:
                 self.place_cursor(start)
             else:
