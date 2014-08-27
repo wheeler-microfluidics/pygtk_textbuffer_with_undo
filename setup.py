@@ -1,8 +1,10 @@
 from distutils.core import setup
 
+import version
+
 
 setup(name='pygtk-textbuffer-with-undo',
-      version='0.0.1',
+      version=version.getVersion(),
       description='GTK textbuffer with undo functionality.',
       keywords='gtk undo buffer text input widget',
       author='Florian Heinle and Christian Fobel',
